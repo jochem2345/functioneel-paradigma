@@ -18,13 +18,13 @@ Het doel van de opdracht is om:
 ## Eisen aan de opdracht
 ### 1. Onderzoek
 - Onderzoek de gekozen programmeertaal en de functionele concepten die in deze taal centraal staan, zoals:
-- - Zuiverheid (pure functions)
-- - First-class functions
-- - Higher-order functions
-- - Immutability
-- - Recursie
-- - Lazy evaluation
-- - Pattern matching
+  - Zuiverheid (pure functions)
+  - First-class functions
+  - Higher-order functions
+  - Immutability
+  - Recursie
+  - Lazy evaluation
+  - Pattern matching
 ### 2. Challenge
 - Bedenk een inhoudelijk interessante challenge die geschikt is om functionele concepten te onderzoeken en toe te passen.
 - De challenge moet van voldoende complexiteit zijn om aan te tonen dat je functionele concepten begrijpt en kunt toepassen.
@@ -37,8 +37,8 @@ Het doel van de opdracht is om:
 ### 4. Reflectie
 - Leg uit welke functionele concepten je hebt toegepast en hoe ze bijdragen aan de oplossing.
 - Reflecteer op het gebruik van functionele concepten:
-- - Waarom zijn bepaalde constructies handig of juist lastig?
-- -  Wat zijn de voordelen of nadelen ten opzichte van imperatieve of objectgeoriënteerde talen?
+  - Waarom zijn bepaalde constructies handig of juist lastig?
+  -  Wat zijn de voordelen of nadelen ten opzichte van imperatieve of objectgeoriënteerde talen?
 ### 5. Rapport
 Schrijf een kort rapport (ongeveer 4-6 pagina’s) dat voldoet aan de richtlijnen van de AIM-controlekaart. Het rapport bevat:
 
