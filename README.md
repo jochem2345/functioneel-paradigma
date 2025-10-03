@@ -6,7 +6,29 @@ Gekozen taal: Haskell
 Challenge: Markdown to HTML converter
 
 Handige bronnen:
+
 - https://www.haskell.org/documentation/
+
+# Uitwerking
+
+Deze repository bestaan uit 2 mappen.
+De implementatie map en de rapport map.
+
+## Implementatie map
+
+In de implementatie map staat de implementatie van het programma. Om het programma te runnen moet je hetvolgende doen.
+Haskell installeren op je systeem of de Haskell extensie downloaden voor visual studio code.
+In je terminal moet je navigeren naar de implementatie map.
+Vervolgens gebruik je het command 'runGHC converter.hs', hiermee runt hij de converter.
+Hij vraagt om een input file en een output file.
+De input file is je markdown file en de output file is je html file. Er bestaan al twee voorbeeld bestanden genaamd input.md en output.html die je kan gebruiken.
+Voer de namen van die files in. Vervolgens convert hij hem.
+
+Om het resultaat te zien moet je naar de html file. Je kan zelfs met ctrl+f5 de daadwerkelijke pagina bekijken.
+
+## Rapport map
+
+In de rapport map staat het word bestand het rapport, deze kan je als het goed is niet via github openen.
 
 # Opdracht Functioneel Paradigma
 
@@ -151,7 +173,7 @@ Schrijf een kort rapport (ongeveer 4-6 pagina’s) dat voldoet aan de richtlijne
 ## Beoordelingscriteria
 
 | Categorie                           | Criteria                                                                                                                                           | Knockout |
-|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
 | Kwaliteit van de challenge          | De gekozen challenge is inhoudelijk interessant en uitdagend                                                                                       | Nee      |
 | Implementatie                       | De code is volledig, correct en maakt duidelijk gebruik van functionele constructies. De code is volledig uitgelegd. Er is gebruik gemaakt van Git | Nee      |
 | Koppeling aan functionele concepten | De gekozen functionele concepten worden correct gekoppeld aan de oplossing                                                                         | Ja       |
