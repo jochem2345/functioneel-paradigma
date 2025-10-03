@@ -1,13 +1,14 @@
 # Hoofdstuk 1
 
-**Jamiro wilt Sophie raggen.**  
-En Cas is gay
+Dit is een **bold** statement.
+Dit is een normale zin.
+Dit is een _italic_ statement.
 
 ## Hoofdstuk 1.1
 
-Punten waarom Jochem geweldig is:
+Redenen waarom Jochem geweldig is:
 
-- Hij ragt mannen
-- Hij lijkt op Jarl van den Berg
+- De converter werkt!
+- Hij is _super_ cool.
 
-- Dit is een tweede lijst
+- Dit is een **tweede** lijst.
