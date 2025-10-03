@@ -1,13 +1,56 @@
--- pattern List3 :: a -> a -> a -> [a]
--- pattern List3 a b c = [a, b, c]
+main :: IO ()
+main = do
+        putStrLn "Input file: "
+        ifile <- getLine
+        putStrLn "Output file: "
+        ofile <- getLine
+        input <- readFile ifile
+        writeFile ofile (markdownToHTML input)
+        putStrLn "Converting successful\n"
 
-converter text = do
-    let chapter = text ++ " - Chapter 1"
-    putStrLn chapter
+markdownToHTML :: String -> String
+markdownToHTML input =
+    let linesOfText = lines input
+        convertedLines = convertLines linesOfText
+        body           = unlines convertedLines
+    in unlines
+        [ "<!DOCTYPE html>"
+        , "<html lang=\"en\">"
+        , "<head>"
+        , "<meta charset=\"UTF-8\">"
+        , "<title>Converted Markdown</title>"
+        , "</head>"
+        , "<body>"
+        , body
+        , "</body>"
+        , "</html>"
+        ]
 
-convert :: String -> String
+
+
+-- Process whole input line-by-line, handling lists
+convertLines :: [String] -> [String]
+convertLines [] = []
+convertLines (('-':' ':rest) : xs) =
+    let (items, restLines) = span isListItem xs
+        firstItem = "<li>" ++ rest ++ "</li>"
+        allItems = firstItem : map toLi items
+    in ["<ul>"] ++ allItems ++ ["</ul>"] ++ convertLines restLines
+convertLines (line:xs) = convert line : convertLines xs
+
+-- Check if a line is a list item
+isListItem :: String -> Bool
+isListItem ('-':' ':_) = True
+isListItem _ = False -- Note: _ is a wildcard pattern which means "anything else"
+
+
+-- Turn a list line into <li>
+toLi :: String -> String
+toLi ('-':' ':rest) = "<li>" ++ rest ++ "</li>"
+toLi other = other
+
 -- Sort markdown elements by line
-
+convert :: String -> String
 
 -- Heading conversions
 convert ('#':' ':rest)  = "<h1>" ++ rest ++ "</h1>"
@@ -21,8 +64,6 @@ convert ('#':'#':'#':'#':'#':'#':' ':rest) = "<h6>" ++ rest ++ "</h6>"
 -- Iets met bold en italic
 convert ('*':'*':rest) = "<strong>" ++ rest ++ "</strong>"
 
--- Unordered List conversion
-convert ('-':' ':rest) = "<ul><li>" ++ rest ++ "</li></ul>"
-
 -- Plain text conversion
+convert "" = ""
 convert text = "<p>" ++ text ++ "</p>"
